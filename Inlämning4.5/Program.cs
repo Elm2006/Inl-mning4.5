@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Inlämning_4.__5
 {
     class Program
@@ -11,16 +11,15 @@ namespace Inlämning_4.__5
             for (int i = 0; i < tal.Length; i++)
             {
                 int nior = tal.IndexOf("9");
-                Console.WriteLine(tal[i]);
                 string tecken = tal[i].ToString();
                 int siffra = int.Parse(tecken);
-                if (i == nior)
-                {
-                    siffra = 0;
-                }
-                if(i+1 == tal.Length)
+                if (i != nior)
                 {
                     siffra += 1;
+                }
+                else if (i == nior)
+                {
+                    siffra = 0;
                 }
                 talet += "" + siffra;
             }
